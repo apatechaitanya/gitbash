@@ -17,6 +17,7 @@ public class Program {
     public static void main(String[] args) {
         Date date = null; //new Date(22,03,1996)
         System.out.println(date.toString());
+    	System.out.println("Hii You Noob");
     }
 }
 
