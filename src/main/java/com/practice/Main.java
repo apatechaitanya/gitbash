@@ -2,11 +2,13 @@ package com.practice;
 
 import java.awt.*;
 import java.sql.SQLOutput;
+import java.time.LocalDate;
 import java.util.Arrays;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
+
     public static void main(String[] args) {
 //        int h = 0b101;
 //        double c = 1_0.0;
@@ -141,9 +143,53 @@ public class Main {
 //        int two = Math.round(1.0);
 //        float three = Math.random();
 //        var double = new double[]{one,two,three};
-        var builder = new StringBuilder();
-        var string = "12345";
-        System.out.println(builder.charAt(4));
+//        var builder = new StringBuilder();
+//        var string = "12345";
+//        System.out.println(builder.charAt(4));
+
+//        int a1[] = {1,2,3};
+//        int bb[] = {1,2,3};
+//        if(a1.equals(bb)){
+//            System.out.println("a");
+//        }
+////
+////        int one1 = Math.min(5,3);
+////        long two = Math.round(5.5);
+////        double three = Math.floor(6.6);
+////
+//////        var double = new double[]{one1,two,three};
+//////    var date = LocalDate.of(2022,4,3);
+//////    date.plusDays(2);
+//////    date.pl
+        System.out.println("012345678".substring(7));
+        String base = "ewe\nsheep\\t";
+        int length = base.length();
+        int indent = base.indent(2).length();
+        int translate = base.translateEscapes().length();
+//        System.out.println(base+" "+length+" "+""+translate+" "+indent);
+
+        System.out.println("%s %s %s".formatted(length,indent,translate));
+
+        String a1 = "aaa";
+        System.out.println(a1.indent(1).length());
+
+        final double song = 6;
+        System.out.println(song);
+
+        Boolean[] b1 = new Boolean[2];
+        Boolean[] b2 = {true,false};
+
+        System.out.println(b1.length);
+        System.out.println(b2.length);
+
+
+        System.out.println(jan(3,3,3));
+
     }
+    public static int jan(int...a){
+        return 9;
+    }
+
+
 }
 
