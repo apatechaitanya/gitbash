@@ -45,6 +45,8 @@ public class Sealed {
         B b = new B();
         System.out.println(b.per(1,2));
 
+
+
         int x = 4;
         String a = switch (x){
             case 1,2: yield "2";
@@ -52,6 +54,66 @@ public class Sealed {
             default: yield "default";
         };
 
+        int  var = 0; //Line n1
+        var: for (; var < 3; var++) {  //Line n2
+//            System.out.println(var%2);
+            if (var % 2 == 0) {
+                continue ; //Line n3
+            }
+            var++; //Line n4
+        }
+        System.out.println(var);
+
         System.out.println(a);
+
+
+        int bb = 0;
+        int t = 0;
+        t :for(int i=0;i<3;i++){
+            if(i ==2){
+                break t;
+            }
+            t++;
+        }
+        System.out.println(t);
+
+
+
+        int ctr = 100;
+        one: for (var i = 0; i < 10; i++) {
+            two: for (var j = 0; j < 7; j++) {
+                three: while (true) {
+                    ctr++;
+                    if (i > j) {
+                        break one;
+                    } else if (i == j) {
+                        break two;
+                    } else {
+                        break three;
+                    }
+                }
+            }
+        }
+        System.out.println(ctr);
+
+
+        String s = " abc\t ";
+
+        System.out.println(s.trim().length());
+        System.out.println(s.stripLeading().length());
+        System.out.println(s.stripTrailing().length());
+
+
+        String str = """
+                
+                a
+                b
+                c""";
+        System.out.println(str.length());
+        System.out.println();
+        System.out.println();
+
+        int d = 'a';
+        System.out.println(d);
     }
 }
