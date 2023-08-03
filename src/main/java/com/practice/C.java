@@ -4,6 +4,8 @@ package com.practice;
 public class C extends abs implements a{
     public static int LENGTH ;
 
+    static int bbb=01;
+
     public C(int x) {
         setLENGTH(x);
     }

@@ -35,11 +35,7 @@ non-sealed class B extends A{
       return a%b;
     }
 }
-class C {
-
-
-
-}
+class C {}
 public class Sealed {
     public static void main(String[] args) {
         B b = new B();

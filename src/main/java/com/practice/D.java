@@ -55,7 +55,7 @@ public class D extends C implements a {
         System.out.println("-------------------------------");
 
         LocalDate newYear = LocalDate.of(2028, 1, 1);
-        LocalDate christmas = LocalDate.of(2028, 12, 25);
+        LocalDate christmas = LocalDate.of(2028, 1, 1);
         boolean flag1 = newYear.isAfter(christmas);
         boolean flag2 = newYear.isBefore(christmas);
         System.out.println(flag1 + ":" + flag2);
@@ -199,6 +199,49 @@ public class D extends C implements a {
 
         System.out.println(s);
 
+        System.out.println(bbb);
+
+
+        byte aaa = 127;
+        System.out.println(" "+(aaa*=2)+" "+aaa);
+
+        String text = null;
+
+        System.out.println(text);
+        System.out.println(null+"null"+null);
+        StringBuilder sb = new StringBuilder("INHALE ");
+        String ss = sb.toString() + (sb.append("EXHALE "));
+        System.out.println(ss.strip().length());
+
+
+        String str = " Chaitanya   ";
+        System.out.println(str.strip()+" "+str.trim().length());
+        boolean flagg = false;
+        System.out.println((flagg = true) | (flagg = false) || (flagg= true));
+        System.out.println(flagg);
+
+        var val = 9;
+        System.out.println(val += 10 - -val-- - --val);
+
+        LocalDate datee = LocalDate.parse("2000-06-25");
+        System.out.println(datee.getDayOfMonth());
+
+        LocalDateTime objj = LocalDateTime.now();
+        System.out.println(objj.getSecond());
+
+
+        LocalDate dater = LocalDate.parse("2000-01-01");
+        Period periodd= Period.ofYears(-3000);
+        System.out.println(dater.plus(periodd));
+
+        System.out.println(Instant.EPOCH);
+
+        LocalTime t11 = LocalTime.now();
+        LocalDateTime t22 = LocalDateTime.now();
+        System.out.println(Duration.between(t22, t11));
+
+
+
 
     }
 
@@ -207,13 +250,13 @@ public class D extends C implements a {
         System.out.println("Hi m1");
         D sd = new D(2);
 
-        System.out.println();
     }
     public int m3(){
         return 2;
     }
     final static void run(){}
     static final void s(){}
+
 
 
 }

@@ -1,8 +1,11 @@
 package com.practice;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.awt.*;
 import java.sql.SQLOutput;
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Arrays;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -185,11 +188,20 @@ public class Main {
 
         System.out.println(jan(3,3,3));
 
+        System.out.println("-------------------");
+        System.out.println("Hello %d , orders %d is ready".formatted(3,4));
+        System.out.println("Result is: " + (10 != 5));
+
+
+        LocalDate dated = LocalDate.of(2019, 1, 2);
+        dated.minus(Period.ofDays(1));
+        LocalDate dated1 = LocalDate.of(2018, 12, 31);
+        dated1.plus(Period.ofDays(1));
+        System.out.println(dated.equals(dated1) + ":" + dated.isEqual(dated1));
     }
     public static int jan(int...a){
         return 9;
     }
-
 
 }
 
