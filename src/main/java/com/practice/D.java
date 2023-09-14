@@ -4,6 +4,7 @@ import java.time.*;
 
 public class D extends C implements a {
     public static final int LENGTH ;
+    String patter = "*";
     final static int a =2;
     static int ss = 2;
     static {
@@ -215,5 +216,25 @@ public class D extends C implements a {
     final static void run(){}
     static final void s(){}
 
-
+class E{
+        public void m1(){
+            System.out.println("Class E m1 method");
+        }
+}
+    public void m4() { //Line n1
+        System.out.println("Foo : m1()");
+        Bar bar = new Bar();
+        bar.m4();
+    }
+    static {
+        System.out.println("D static");
+    }
+    class Bar {
+        static {
+            System.out.println("Bar static");
+        }
+        public void m4() { //Line n2
+            System.out.println("Bar : m1()");
+        }
+    }
 }

@@ -1,7 +1,8 @@
 package com.udemy;
 
-sealed class A permits B{
 
+sealed class A permits B{
+    String name = "Chaitanya";
 }
 non-sealed class B extends A{
     int per(int a,int b){
@@ -21,7 +22,7 @@ non-sealed class B extends A{
         var sb = new StringBuilder("HavePatience");
        sb.delete(4, 5).insert(4, " P").toString().toUpperCase();
         System.out.println(sb);
-
+        System.out.println();
         int day = '3';
         switch(day) {
             case '3':
@@ -45,6 +46,8 @@ public class Sealed {
         B b = new B();
         System.out.println(b.per(1,2));
 
+        A n = new B();
+        System.out.println(n.name);
 
 
         int x = 4;
