@@ -18,6 +18,5 @@ public class Mapp {
         for(Integer s:keys){
             System.out.println(m.get(s));
         }
-
     }
 }
