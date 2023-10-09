@@ -79,5 +79,9 @@ public class Listt {
 
         LinkedHashMap<Integer,Integer> hashMap = new LinkedHashMap<Integer,Integer>();
         hashMap.values();
+
+
+
+        
     }
 }
