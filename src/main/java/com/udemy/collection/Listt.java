@@ -3,6 +3,31 @@ package com.udemy.collection;
 import java.util.*;
 import java.util.stream.Stream;
 
+class Employee {
+    double salary;
+    String name;
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Employee(String name, double salary) {
+        this.salary = salary;
+        this.name = name;
+    }
+}
 
 class Student{
     int age;
@@ -80,8 +105,32 @@ public class Listt {
         LinkedHashMap<Integer,Integer> hashMap = new LinkedHashMap<Integer,Integer>();
         hashMap.values();
 
+        List<String> list = Arrays.asList("#####", "#", "##", "####", "###");
+        Comparator<String> comp = Comparator.comparing(s -> s);
+        Collections.sort(list, comp);
+        printCodes(list);
 
+
+        List<String> emails = Arrays.asList("udayan@outlook.com", "sachin@outlook.com", "sachin@gmail.com",
+                "udayan@gmail.com");
+        Collections.sort(emails, Comparator.comparing(str -> str.substring(str.indexOf("@") + 1)));
+        for(String email : emails) {
+            System.out.println(email);
+        }
+
+        List<Employee> employees = Arrays.asList(new Employee("Sameer", 10_000),
+                new Employee("Sonia", 12_000),new Employee("Chaitanya", 60_000));
+        employees.stream()
+                .filter(x -> x.getSalary() > 10000)
+                .map(e -> e.getName())
+                .sorted()
+                .forEach(System.out::println);
 
         
+    }
+    private static void printCodes(List<String> list) {
+        for (String str : list) {
+            System.out.println(str);
+        }
     }
 }
